@@ -1,0 +1,17 @@
+// Proto V3 format 
+syntax = "proto3";
+
+package pb;
+
+message CalcRequest {
+    int32 A = 1;
+    int32 B = 2;      
+}
+
+message CalcReply {
+    int32 Sum = 3;
+}
+
+service Calculator {
+    rpc Add (CalcRequest) returns (CalcReply);
+}
